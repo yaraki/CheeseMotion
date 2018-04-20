@@ -1,0 +1,4 @@
+include ':deck',
+        ':cheesemotion-start',
+        ':cheesemotion-final',
+        ':common'
