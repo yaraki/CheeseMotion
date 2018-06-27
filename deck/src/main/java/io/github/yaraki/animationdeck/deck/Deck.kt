@@ -91,6 +91,10 @@ data class Page(val elements: List<Element>)
 
 // Builders & DSL
 
+@DslMarker
+annotation class DeckMarker
+
+@DeckMarker
 class StandardDeckBuilder {
     var title = "(No title)"
     var subtitle = ""
@@ -140,6 +144,7 @@ class StandardDeckBuilder {
     }
 }
 
+@DeckMarker
 class ChapterBuilder {
     var title = "(No title)"
     var body = ""
@@ -174,6 +179,7 @@ class ChapterBuilder {
     }
 }
 
+@DeckMarker
 class SectionBuilder {
     var title = "(No title)"
     var body = ""
@@ -187,6 +193,7 @@ class SectionBuilder {
     }
 }
 
+@DeckMarker
 class CodeBuilder {
     var body = ""
     var backgroundColor = Color.rgb(0xf4, 0x43, 0x36)
