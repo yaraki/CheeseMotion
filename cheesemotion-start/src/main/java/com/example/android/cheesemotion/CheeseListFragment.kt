@@ -57,13 +57,13 @@ class CheeseListFragment : Fragment() {
         view.findViewById<RecyclerView>(R.id.list).run {
             setHasFixedSize(true)
             layoutManager = GridLayoutManager(context, 2)
-            adapter = CheeseListAdapter({ cheeseId, image ->
+            adapter = CheeseListAdapter { cheeseId, image ->
                 activity?.let {
                     if (!it.isFinishing) {
                         (it as Listener).onCheeseSelected(cheeseId, image)
                     }
                 }
-            })
+            }
             // Invoke the postponed transition when the RecyclerView is drawn for the first time.
             doOnPreDraw {
                 // TODO: Start the postponed reenter transition.
