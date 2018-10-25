@@ -78,7 +78,7 @@ data class Code(
 data class FragmentEmbed(
         override val id: String,
         override val position: Position,
-        val fragmentClass: Class<out androidx.fragment.app.Fragment>
+        val fragmentClass: Class<out Fragment>
 ) : Element
 
 data class BackgroundColor(
@@ -197,7 +197,7 @@ class SectionBuilder {
 class CodeBuilder {
     var body = ""
     var backgroundColor = Color.rgb(0xf4, 0x43, 0x36)
-    var demo: Class<out androidx.fragment.app.Fragment>? = null
+    var demo: Class<out Fragment>? = null
     fun build(): Page {
         val elements = mutableListOf(
                 BackgroundColor("bg", Position.Background(1024), backgroundColor),

@@ -30,7 +30,7 @@ import com.example.android.cheesemotion.common.Cheeses
 
 class CheeseListAdapter(
         private val onCheeseSelected: (Int, ImageView) -> Unit
-) : androidx.recyclerview.widget.RecyclerView.Adapter<CheeseListAdapter.CheeseViewHolder>() {
+) : RecyclerView.Adapter<CheeseListAdapter.CheeseViewHolder>() {
 
     private val onClickListener = View.OnClickListener {
         // Ungroup the clicked item so the shared element transition can remove the ImageView.
@@ -50,7 +50,7 @@ class CheeseListAdapter(
 
 
     class CheeseViewHolder(parent: ViewGroup, onClickListener: View.OnClickListener)
-        : androidx.recyclerview.widget.RecyclerView.ViewHolder(LayoutInflater.from(parent.context)
+        : RecyclerView.ViewHolder(LayoutInflater.from(parent.context)
             .inflate(R.layout.cheese_list_item, parent, false)) {
 
         private val image = itemView.findViewById<ImageView>(R.id.image)

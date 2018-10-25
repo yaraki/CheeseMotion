@@ -27,7 +27,7 @@ import android.widget.FrameLayout
 import io.github.yaraki.animationdeck.R
 import io.github.yaraki.animationdeck.demo.DemoFactory
 
-class BadLayoutFragment : androidx.fragment.app.Fragment() {
+class BadLayoutFragment : Fragment() {
 
     companion object {
         val FACTORY = object : DemoFactory {

@@ -32,7 +32,7 @@ import android.widget.FrameLayout
 import io.github.yaraki.animationdeck.R
 import io.github.yaraki.animationdeck.demo.DemoFactory
 
-class ExpandFragment : androidx.fragment.app.Fragment() {
+class ExpandFragment : Fragment() {
 
     companion object {
 

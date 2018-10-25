@@ -27,7 +27,7 @@ import android.widget.Button
 import io.github.yaraki.animationdeck.R
 import io.github.yaraki.animationdeck.demo.DemoFactory
 
-class ToggleFadeFragment : androidx.fragment.app.Fragment() {
+class ToggleFadeFragment : Fragment() {
 
     companion object {
         val FACTORY = object : DemoFactory {

@@ -27,7 +27,7 @@ import android.widget.Button
 import io.github.yaraki.animationdeck.R
 import io.github.yaraki.animationdeck.demo.DemoFactory
 
-class FadeOutFragment : androidx.fragment.app.Fragment() {
+class FadeOutFragment : Fragment() {
 
     companion object {
         val FACTORY = object : DemoFactory {

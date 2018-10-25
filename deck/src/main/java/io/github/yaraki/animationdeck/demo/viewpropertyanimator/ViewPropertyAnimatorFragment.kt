@@ -26,7 +26,7 @@ import android.widget.Button
 import io.github.yaraki.animationdeck.R
 import io.github.yaraki.animationdeck.demo.DemoFactory
 
-class ViewPropertyAnimatorFragment : androidx.fragment.app.Fragment() {
+class ViewPropertyAnimatorFragment : Fragment() {
 
     companion object {
         val FACTORY = object : DemoFactory {

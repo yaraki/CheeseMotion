@@ -26,7 +26,7 @@ import io.github.yaraki.animationdeck.demo.DEMOS
 import io.github.yaraki.animationdeck.demo.Demo
 
 class DemoListAdapter(private val listener: OnDemoSelectedListener)
-    : androidx.recyclerview.widget.RecyclerView.Adapter<DemoListAdapter.ViewHolder>() {
+    : RecyclerView.Adapter<DemoListAdapter.ViewHolder>() {
 
     private val onClickListener = View.OnClickListener {
         val demo = it.getTag(R.id.tag_demo) as Demo
@@ -44,9 +44,9 @@ class DemoListAdapter(private val listener: OnDemoSelectedListener)
     }
 
     class ViewHolder(inflater: LayoutInflater, parent: ViewGroup, listener: View.OnClickListener)
-        : androidx.recyclerview.widget.RecyclerView.ViewHolder(inflater.inflate(R.layout.demo_list_item, parent, false)) {
+        : RecyclerView.ViewHolder(inflater.inflate(R.layout.demo_list_item, parent, false)) {
 
-        val title = itemView.findViewById<TextView>(R.id.title)
+        val title: TextView = itemView.findViewById(R.id.title)
 
         init {
             itemView.setOnClickListener(listener)

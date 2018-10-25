@@ -38,7 +38,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.android.cheesemotion.common.Cheeses
 
-class CheeseDetailFragment : androidx.fragment.app.Fragment() {
+class CheeseDetailFragment : Fragment() {
 
     interface FabHost {
         val fab: FloatingActionButton
@@ -84,7 +84,7 @@ class CheeseDetailFragment : androidx.fragment.app.Fragment() {
         // Bind
         val cheese = Cheeses.CHEESES[arguments?.getInt(ARG_CHEESE_ID) ?: 0]
         val resourceId = Cheeses.getDrawableForCheese(cheese)
-        Glide.with(this)
+        Glide.with(image)
                 .load(resourceId)
                 // We want to handle ImageView with Transition, so disable scaleType transformation
                 // in Glide.

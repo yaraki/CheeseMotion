@@ -32,7 +32,7 @@ data class Demo(
 )
 
 interface DemoFactory {
-    fun create(): androidx.fragment.app.Fragment
+    fun create(): Fragment
 }
 
 val DEMOS = listOf(

@@ -20,6 +20,7 @@ import android.content.Context
 import android.graphics.pdf.PdfDocument
 import android.os.SystemClock
 import androidx.annotation.RequiresApi
+import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
@@ -637,7 +638,7 @@ class DeckViewModel : ViewModel() {
     }
 
     @RequiresApi(19)
-    fun generatePdf(view: PageView, fragmentManager: androidx.fragment.app.FragmentManager?) {
+    fun generatePdf(view: PageView, fragmentManager: FragmentManager?) {
         thread {
             val document = PdfDocument()
             deck.pages.forEachIndexed { i, page ->

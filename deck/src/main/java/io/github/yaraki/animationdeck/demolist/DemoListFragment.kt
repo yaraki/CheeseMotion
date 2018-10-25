@@ -25,7 +25,7 @@ import android.view.View
 import android.view.ViewGroup
 import io.github.yaraki.animationdeck.R
 
-class DemoListFragment : androidx.fragment.app.Fragment() {
+class DemoListFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -33,9 +33,9 @@ class DemoListFragment : androidx.fragment.app.Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        view.findViewById<androidx.recyclerview.widget.RecyclerView>(R.id.list).run {
+        view.findViewById<RecyclerView>(R.id.list).run {
             setHasFixedSize(true)
-            layoutManager = androidx.recyclerview.widget.LinearLayoutManager(view.context)
+            layoutManager = LinearLayoutManager(view.context)
             adapter = DemoListAdapter(requireActivity() as OnDemoSelectedListener)
         }
     }

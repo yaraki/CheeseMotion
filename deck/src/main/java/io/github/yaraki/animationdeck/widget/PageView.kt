@@ -29,6 +29,7 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.view.ViewCompat
+import androidx.fragment.app.FragmentManager
 import io.github.yaraki.animationdeck.deck.*
 
 class PageView @JvmOverloads constructor(context: Context,
@@ -48,7 +49,7 @@ class PageView @JvmOverloads constructor(context: Context,
 
     private var _page: Page? = null
 
-    fun setPage(page: Page?, fragmentManager: androidx.fragment.app.FragmentManager?) {
+    fun setPage(page: Page?, fragmentManager: FragmentManager?) {
         _page = page
         updatePage(fragmentManager)
     }
@@ -113,7 +114,7 @@ class PageView @JvmOverloads constructor(context: Context,
         }
     }
 
-    private fun updatePage(fragmentManager: androidx.fragment.app.FragmentManager?) {
+    private fun updatePage(fragmentManager: FragmentManager?) {
         clearScales()
         val currentPage = _page
         if (currentPage == null) {
