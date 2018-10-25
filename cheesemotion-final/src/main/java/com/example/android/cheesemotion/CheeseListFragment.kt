@@ -17,19 +17,19 @@
 package com.example.android.cheesemotion
 
 import android.os.Bundle
-import android.support.transition.Explode
-import android.support.v4.app.Fragment
-import android.support.v4.view.animation.FastOutLinearInInterpolator
-import android.support.v4.view.animation.LinearOutSlowInInterpolator
-import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.transition.Explode
+import androidx.fragment.app.Fragment
+import androidx.interpolator.view.animation.FastOutLinearInInterpolator
+import androidx.interpolator.view.animation.LinearOutSlowInInterpolator
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.core.view.doOnPreDraw
 
-class CheeseListFragment : Fragment() {
+class CheeseListFragment : androidx.fragment.app.Fragment() {
 
     companion object {
         const val EXIT_TRANSITION_DURATION = 150L
@@ -65,9 +65,9 @@ class CheeseListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         // Postpone the reenter transition until the grid items are laid out.
         postponeEnterTransition()
-        view.findViewById<RecyclerView>(R.id.list).run {
+        view.findViewById<androidx.recyclerview.widget.RecyclerView>(R.id.list).run {
             setHasFixedSize(true)
-            layoutManager = GridLayoutManager(context, 2)
+            layoutManager = androidx.recyclerview.widget.GridLayoutManager(context, 2)
             adapter = CheeseListAdapter { cheeseId, image ->
                 activity?.let {
                     if (!it.isFinishing) {

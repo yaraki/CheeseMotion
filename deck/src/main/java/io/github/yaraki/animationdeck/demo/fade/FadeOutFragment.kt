@@ -17,9 +17,9 @@
 package io.github.yaraki.animationdeck.demo.fade
 
 import android.os.Bundle
-import android.support.transition.Fade
-import android.support.transition.TransitionManager
-import android.support.v4.app.Fragment
+import androidx.transition.Fade
+import androidx.transition.TransitionManager
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,7 +27,7 @@ import android.widget.Button
 import io.github.yaraki.animationdeck.R
 import io.github.yaraki.animationdeck.demo.DemoFactory
 
-class FadeOutFragment : Fragment() {
+class FadeOutFragment : androidx.fragment.app.Fragment() {
 
     companion object {
         val FACTORY = object : DemoFactory {

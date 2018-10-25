@@ -18,16 +18,16 @@ package com.example.android.cheesemotion
 
 import android.content.Context
 import android.os.Bundle
-import android.support.design.widget.FloatingActionButton
-import android.support.transition.ChangeBounds
-import android.support.transition.ChangeTransform
-import android.support.transition.Slide
-import android.support.transition.TransitionSet
-import android.support.v4.app.Fragment
-import android.support.v4.view.ViewCompat
-import android.support.v4.view.animation.FastOutLinearInInterpolator
-import android.support.v4.view.animation.FastOutSlowInInterpolator
-import android.support.v4.view.animation.LinearOutSlowInInterpolator
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import androidx.transition.ChangeBounds
+import androidx.transition.ChangeTransform
+import androidx.transition.Slide
+import androidx.transition.TransitionSet
+import androidx.fragment.app.Fragment
+import androidx.core.view.ViewCompat
+import androidx.interpolator.view.animation.FastOutLinearInInterpolator
+import androidx.interpolator.view.animation.FastOutSlowInInterpolator
+import androidx.interpolator.view.animation.LinearOutSlowInInterpolator
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -38,7 +38,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.android.cheesemotion.common.Cheeses
 
-class CheeseDetailFragment : Fragment() {
+class CheeseDetailFragment : androidx.fragment.app.Fragment() {
 
     interface FabHost {
         val fab: FloatingActionButton

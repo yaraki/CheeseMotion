@@ -18,15 +18,15 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion versions.compileSdk
+    compileSdkVersion sdk.compile
 
     defaultConfig {
         applicationId 'io.github.yaraki.animationdeck'
-        minSdkVersion versions.minSdk
-        targetSdkVersion versions.targetSdk
+        minSdkVersion sdk.min
+        targetSdkVersion sdk.target
         versionCode 1006
         versionName '1.0.6'
-        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
 
     buildTypes {
@@ -40,18 +40,20 @@ android {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlin"
+    implementation "androidx.core:core-ktx:$versions.core_ktx"
 
     // Support
-    implementation "com.android.support:appcompat-v7:$versions.support"
-    implementation "com.android.support:recyclerview-v7:$versions.support"
-    implementation "com.android.support:transition:$versions.support"
-    implementation "com.android.support.constraint:constraint-layout:$versions.constraint"
+    implementation "androidx.appcompat:appcompat:$versions.appcompat"
+    implementation "androidx.recyclerview:recyclerview:$versions.recycler"
+    implementation "androidx.transition:transition:$versions.transition"
+    implementation "com.google.android.material:material:$versions.material"
+    implementation "androidx.constraintlayout:constraintlayout:$versions.constraint"
 
     // Arch
-    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
 
     // Test
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation "com.android.support.test:runner:$versions.testing"
-    androidTestImplementation "com.android.support.test.espresso:espresso-core:$versions.espresso"
+    androidTestImplementation "androidx.test:runner:$versions.testing"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$versions.espresso"
 }

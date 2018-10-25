@@ -16,15 +16,14 @@
 
 package io.github.yaraki.animationdeck.ui.deck
 
-import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.Transformations
-import android.arch.lifecycle.ViewModel
 import android.content.Context
 import android.graphics.pdf.PdfDocument
 import android.os.SystemClock
-import android.support.annotation.RequiresApi
-import android.support.v4.app.FragmentManager
+import androidx.annotation.RequiresApi
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Transformations
+import androidx.lifecycle.ViewModel
 import io.github.yaraki.animationdeck.deck.Page
 import io.github.yaraki.animationdeck.deck.standardDeck
 import io.github.yaraki.animationdeck.demo.fade.FadeOutFragment
@@ -638,7 +637,7 @@ class DeckViewModel : ViewModel() {
     }
 
     @RequiresApi(19)
-    fun generatePdf(view: PageView, fragmentManager: FragmentManager?) {
+    fun generatePdf(view: PageView, fragmentManager: androidx.fragment.app.FragmentManager?) {
         thread {
             val document = PdfDocument()
             deck.pages.forEachIndexed { i, page ->

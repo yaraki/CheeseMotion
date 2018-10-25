@@ -18,8 +18,8 @@ package io.github.yaraki.animationdeck.demo.badlayout
 
 import android.animation.ValueAnimator
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v4.view.animation.FastOutSlowInInterpolator
+import androidx.fragment.app.Fragment
+import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,7 +27,7 @@ import android.widget.FrameLayout
 import io.github.yaraki.animationdeck.R
 import io.github.yaraki.animationdeck.demo.DemoFactory
 
-class BadLayoutFragment : Fragment() {
+class BadLayoutFragment : androidx.fragment.app.Fragment() {
 
     companion object {
         val FACTORY = object : DemoFactory {

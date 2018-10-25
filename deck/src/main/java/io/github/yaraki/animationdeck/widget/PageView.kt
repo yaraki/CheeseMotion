@@ -19,17 +19,16 @@ package io.github.yaraki.animationdeck.widget
 import android.content.Context
 import android.graphics.Color
 import android.graphics.Typeface
-import android.support.constraint.ConstraintLayout
-import android.support.constraint.ConstraintSet
-import android.support.v4.app.FragmentManager
-import android.support.v4.view.ViewCompat
-import android.support.v7.widget.AppCompatTextView
 import android.util.AttributeSet
 import android.util.Log
 import android.util.TypedValue
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.TextView
+import androidx.appcompat.widget.AppCompatTextView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintSet
+import androidx.core.view.ViewCompat
 import io.github.yaraki.animationdeck.deck.*
 
 class PageView @JvmOverloads constructor(context: Context,
@@ -49,7 +48,7 @@ class PageView @JvmOverloads constructor(context: Context,
 
     private var _page: Page? = null
 
-    fun setPage(page: Page?, fragmentManager: FragmentManager?) {
+    fun setPage(page: Page?, fragmentManager: androidx.fragment.app.FragmentManager?) {
         _page = page
         updatePage(fragmentManager)
     }
@@ -94,7 +93,7 @@ class PageView @JvmOverloads constructor(context: Context,
         }
         val constraintSet = ConstraintSet().apply { clone(this@PageView) }
         var changed = false
-        connectionMargins.forEach { connection, size ->
+        connectionMargins.entries.forEach { (connection, size) ->
             constraintSet.connect(
                     connection.startId, connection.startSide,
                     connection.endId, connection.endSide,
@@ -114,7 +113,7 @@ class PageView @JvmOverloads constructor(context: Context,
         }
     }
 
-    private fun updatePage(fragmentManager: FragmentManager?) {
+    private fun updatePage(fragmentManager: androidx.fragment.app.FragmentManager?) {
         clearScales()
         val currentPage = _page
         if (currentPage == null) {

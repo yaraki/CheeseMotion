@@ -20,8 +20,8 @@ import android.animation.Animator
 import android.animation.ArgbEvaluator
 import android.animation.ValueAnimator
 import android.graphics.drawable.ColorDrawable
-import android.support.transition.Transition
-import android.support.transition.TransitionValues
+import androidx.transition.Transition
+import androidx.transition.TransitionValues
 import android.view.ViewGroup
 
 

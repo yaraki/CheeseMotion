@@ -16,18 +16,18 @@
 
 package io.github.yaraki.animationdeck
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
 import android.os.Build
 import android.os.Bundle
-import android.support.transition.*
-import android.support.v4.view.animation.FastOutLinearInInterpolator
-import android.support.v4.view.animation.FastOutSlowInInterpolator
-import android.support.v4.view.animation.LinearOutSlowInInterpolator
-import android.support.v7.app.AppCompatActivity
 import android.view.KeyEvent
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.interpolator.view.animation.FastOutLinearInInterpolator
+import androidx.interpolator.view.animation.FastOutSlowInInterpolator
+import androidx.interpolator.view.animation.LinearOutSlowInInterpolator
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
+import androidx.transition.*
 import io.github.yaraki.animationdeck.transition.ChangeColor
 import io.github.yaraki.animationdeck.ui.deck.DeckViewModel
 import io.github.yaraki.animationdeck.widget.PageView
@@ -35,8 +35,6 @@ import io.github.yaraki.animationdeck.widget.PageView
 class DeckActivity : AppCompatActivity() {
 
     companion object {
-        const val EXTRA_PAGE = "page"
-
         private val INTERPOLATOR_OUT = FastOutLinearInInterpolator()
         private val INTERPOLATOR_COMMON = FastOutSlowInInterpolator()
         private val INTERPOLATOR_IN = LinearOutSlowInInterpolator()

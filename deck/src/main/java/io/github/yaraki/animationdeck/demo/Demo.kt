@@ -16,8 +16,8 @@
 
 package io.github.yaraki.animationdeck.demo
 
-import android.support.annotation.StringRes
-import android.support.v4.app.Fragment
+import androidx.annotation.StringRes
+import androidx.fragment.app.Fragment
 import io.github.yaraki.animationdeck.R
 import io.github.yaraki.animationdeck.demo.badlayout.BadLayoutFragment
 import io.github.yaraki.animationdeck.demo.expand.ExpandFragment
@@ -32,7 +32,7 @@ data class Demo(
 )
 
 interface DemoFactory {
-    fun create(): Fragment
+    fun create(): androidx.fragment.app.Fragment
 }
 
 val DEMOS = listOf(
