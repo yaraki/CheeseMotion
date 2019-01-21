@@ -21,12 +21,12 @@ buildscript {
             compile: 28,
     ]
     ext.versions = [
-            kotlin    : '1.2.71',
-            core_ktx  : '1.0.0',
-            constraint: '2.0.0-alpha2',
-            appcompat : '1.0.0',
+            kotlin    : '1.3.11',
+            core_ktx  : '1.0.1',
+            constraint: '1.1.3',
+            appcompat : '1.0.2',
             recycler  : '1.0.0',
-            transition: '1.0.0',
+            transition: '1.0.1',
             material  : '1.0.0',
             glide     : '4.8.0',
             testing   : '1.1.0-beta02',
@@ -37,7 +37,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:3.3.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
     }
 }
